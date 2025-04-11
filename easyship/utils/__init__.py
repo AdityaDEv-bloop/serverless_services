@@ -1,0 +1,1 @@
+from easyship.utils.multilanguage_content import *

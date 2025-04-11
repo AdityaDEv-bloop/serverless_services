@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
+from dotenv import load_dotenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-9u#@9q7*-$z9i_19!^7kf0l2z*p$j7-(e#--fm1vgwomu$s=$!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'easyship'
 ]
 
 MIDDLEWARE = [
@@ -71,13 +73,31 @@ WSGI_APPLICATION = 'serverless_services.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+DATABASES = {}
+try:
+    os.environ['ENVIROMENT']
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': os.environ['DEV_DB_DATABASE_NAME'],
+            'USER': os.environ['DEV_DB_USER_NAME'],
+            'PASSWORD': os.environ['DEV_DB_PASSWORD'],
+            'HOST': os.environ['DEV_DB_HOST'],
+            'PORT': os.environ['DEV_DB_PORT'],
+        },
     }
-}
+except:
+    load_dotenv()
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': os.environ['DEV_DB_DATABASE_NAME'],
+            'USER': os.environ['DEV_DB_USER_NAME'],
+            'PASSWORD': os.environ['DEV_DB_PASSWORD'],
+            'HOST': os.environ['DEV_DB_HOST'],
+            'PORT': os.environ['DEV_DB_PORT'],   
+        },
+    }
 
 
 # Password validation
