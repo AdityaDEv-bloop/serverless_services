@@ -44,4 +44,8 @@
     Apr 12 17:43:13 ip-172-31-23-39 systemd[1]: Started codedeploy-agent.service - LSB: AWS CodeDeploy Host Agent.
  -->
 
- 11.
+ 11. d-E9MJC01PB
+
+ severless-services-deployment-group
+
+ less /opt/codedeploy-agent/deployment-root/severless-services-deployment-group/d-E9MJC01PB/logs/scripts.log
