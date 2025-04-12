@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-sed -i 's/\[]/\["54.179.168.163"]/' /home/ubuntu/serverless_services/serverless_services/settings.py
+sed -i 's/\[]/\["52.221.199.60"]/' /home/ubuntu/serverless_services/serverless_services/settings.py
 
 python3 manage.py makemigrations
 python3 manage.py migrate
