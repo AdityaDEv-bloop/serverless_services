@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class EasyshipConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'easyship'
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "easyship"
