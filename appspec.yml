@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files: 
   - source: /
-    destination: /home/ubuntu/blogprojectdrf
+    destination: /home/ubuntu/serverless_services
 permissions:
-  - object: /home/ubuntu/blogprojectdrf
+  - object: /home/ubuntu/serverless_services
     owner: ubuntu
     group: ubuntu
 hooks:
