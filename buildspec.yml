@@ -1,0 +1,28 @@
+version: 0.1
+
+environment_variables:
+  plaintext:
+    DJANGO_SETTINGS_MODULE: config.settings.test
+    DEV_DB_USER_NAME : postgres
+    DEV_DB_PASSWORD : b9PdcoJBletdcLovu8rm
+    DEV_DB_HOST : db-adl-dev.cpeaw864a5mf.eu-north-1.rds.amazonaws.com
+    DEV_DB_DATABASE_NAME : dbadldev
+    DEV_DB_PORT : 5432
+    DEV_DB_REGION : eu-north-1
+    ENVIROMENT : PROD
+    OPBEAT_ENABLED: False
+
+phases:
+  pre_build:
+    commands:
+      - echo Prebuild ops
+      - pip3 install -r requirements.txt
+  build:
+    commands:
+      - echo Building the application 
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'
