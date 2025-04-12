@@ -1,9 +1,9 @@
-name: Run Test Cases
+name: Run Precommits and Test Cases
 
 on: [push, pull_request]
 
 jobs:
-  run-tests:
+  run-precommits-and-test-cases:
     runs-on: ubuntu-latest
 
     steps:
