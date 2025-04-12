@@ -23,9 +23,9 @@
 9. sudo ./install auto > /tmp/logfile
 
 <!-- Should See Active codedeploy agent service running -->
-10. sudo service codedeploy-agent status 
+10. sudo service codedeploy-agent status
 
-<!-- Output 
+<!-- Output
 
     codedeploy-agent.service - LSB: AWS CodeDeploy Host Agent
         Loaded: loaded (/etc/init.d/codedeploy-agent; generated)
@@ -44,4 +44,4 @@
     Apr 12 17:43:13 ip-172-31-23-39 systemd[1]: Started codedeploy-agent.service - LSB: AWS CodeDeploy Host Agent.
  -->
 
- 11. 
+ 11.

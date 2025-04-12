@@ -1,9 +1,9 @@
-#!/usr/bin/bash 
+#!/usr/bin/bash
 
 sed -i 's/\[]/\["54.179.168.163"]/' /home/ubuntu/serverless_services/serverless_services/settings.py
 
-python manage.py migrate 
-# python manage.py makemigrations     
+python manage.py migrate
+# python manage.py makemigrations
 python manage.py collectstatic
 sudo service gunicorn restart
 sudo service nginx restart
