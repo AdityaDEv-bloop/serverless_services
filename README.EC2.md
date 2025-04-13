@@ -56,7 +56,7 @@
 
  severless-services-deployment-group
 
- less /opt/codedeploy-agent/deployment-root/67918741-84b2-4b83-8670-c9c9b502561b/d-2R5V74DPB/logs/scripts.log
+ less /opt/codedeploy-agent/deployment-root/67918741-84b2-4b83-8670-c9c9b502561b/d-5KPXHVEPB/logs/scripts.log
  d-KM5EN4UCO
 
 
