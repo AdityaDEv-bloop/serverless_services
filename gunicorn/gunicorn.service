@@ -7,7 +7,7 @@ After=network.target
 User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/serverless_services
-ExecStart=/home/ubuntu/serverless_services/venv/bin/gunicorn \
+ExecStart=/home/ubuntu/serverless_services/env/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
