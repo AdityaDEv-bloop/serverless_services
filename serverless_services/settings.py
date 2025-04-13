@@ -92,7 +92,7 @@ except:
     load_dotenv()
     DATABASES = {
         "default": {
-            "ENGINE": "django.db.backends.postgresql_psycopg2",
+            "ENGINE": "django.db.backends.postgresql",
             "NAME": os.environ["DEV_DB_DATABASE_NAME"],
             "USER": os.environ["DEV_DB_USER_NAME"],
             "PASSWORD": os.environ["DEV_DB_PASSWORD"],
