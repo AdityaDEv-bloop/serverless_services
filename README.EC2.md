@@ -48,5 +48,8 @@
 
  severless-services-deployment-group
 
- less /opt/codedeploy-agent/deployment-root/67918741-84b2-4b83-8670-c9c9b502561b/d-JXOSFO1PB/logs/scripts.log
+ less /opt/codedeploy-agent/deployment-root/67918741-84b2-4b83-8670-c9c9b502561b/d-F7RCNGDPB/logs/scripts.log
  d-KM5EN4UCO
+
+
+ ssh -i "Serverless-Service-Key-pair-Ec2.pem" ubuntu@ec2-52-221-199-60.ap-southeast-1.compute.amazonaws.com
