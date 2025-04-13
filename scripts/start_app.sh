@@ -1,5 +1,7 @@
 #!/usr/bin/bash
-
+echo Virtual Env Activating
+source /home/ubuntu/serverless_services/env/bin/activate
+echo Virtual Env Activated----Done
 sed -i 's/\[]/\["52.221.199.60"]/' /home/ubuntu/serverless_services/serverless_services/settings.py
 
 python3 /home/ubuntu/serverless_services/manage.py makemigrations
