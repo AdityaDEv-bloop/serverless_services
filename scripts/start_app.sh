@@ -4,6 +4,7 @@ source /home/ubuntu/serverless_services/env/bin/activate
 echo Virtual Env Activated----Done
 sed -i 's/\[]/\["52.221.199.60"]/' /home/ubuntu/serverless_services/serverless_services/settings.py
 
+cp .env /home/ubuntu/serverless_services/
 python3 /home/ubuntu/serverless_services/manage.py makemigrations
 python3 /home/ubuntu/serverless_services/manage.py migrate
 python3 /home/ubuntu/serverless_services/manage.py collectstatic
