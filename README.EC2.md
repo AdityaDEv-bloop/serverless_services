@@ -46,9 +46,17 @@
 
  11. d-E9MJC01PB
 
+<!-- To Get file from S3 need to install this package -->
+ 12. sudo apt-get install s3cmd
+
+ <!-- Then Run this Command -->
+
+ 13. s3cmd get s3://<Bucket_Name>/<Folder_Name>/<File_Name>
+
+
  severless-services-deployment-group
 
- less /opt/codedeploy-agent/deployment-root/67918741-84b2-4b83-8670-c9c9b502561b/d-H9R3YSDPB/logs/scripts.log
+ less /opt/codedeploy-agent/deployment-root/67918741-84b2-4b83-8670-c9c9b502561b/d-2R5V74DPB/logs/scripts.log
  d-KM5EN4UCO
 
 

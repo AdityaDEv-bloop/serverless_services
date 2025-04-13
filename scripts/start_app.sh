@@ -7,7 +7,7 @@ sed -i 's/\[]/\["52.221.199.60"]/' /home/ubuntu/serverless_services/serverless_s
 cp .env /home/ubuntu/serverless_services/
 python3 /home/ubuntu/serverless_services/manage.py makemigrations
 python3 /home/ubuntu/serverless_services/manage.py migrate
-python3 /home/ubuntu/serverless_services/manage.py collectstatic
+python3 /home/ubuntu/serverless_services/manage.py collectstatic --noinput
 sudo service gunicorn restart
 sudo service nginx restart
 #sudo tail -f /var/log/nginx/error.log
