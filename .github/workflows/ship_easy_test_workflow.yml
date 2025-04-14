@@ -27,3 +27,4 @@ jobs:
           ENVIROMENT: ${{ secrets.ENVIROMENT }}
           KEY_PART_ONE: ${{ secrets.KEY_PART_ONE }}
           KEY_PART_TWO: ${{ secrets.KEY_PART_TWO }}
+          DEBUG: ${{ secrets.DEBUG }}

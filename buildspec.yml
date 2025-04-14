@@ -10,6 +10,7 @@ environment_variables:
     DEV_DB_PORT: 5432
     DEV_DB_REGION: eu-north-1
     ENVIROMENT: PROD
+    DEBUG: False
     OPBEAT_ENABLED: False
 
 phases:
