@@ -1,6 +1,13 @@
 env/
 .env
+*-env/
+*.evv/
+*_env/
+staticfiles/
 db.sqlite3
+node_modules/
+package-*.json
+package.json
 
 
 */__pycache__/*

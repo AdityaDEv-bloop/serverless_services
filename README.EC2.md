@@ -14,6 +14,7 @@
 5. sudo apt install wget
 
 <!-- Replace the Region Accordingly -->
+
 6. wget https://aws-codedeploy-ap-southeast-1.s3.ap-southeast-1.amazonaws.com/latest/install
 
 7. chmod +x ./install
@@ -23,6 +24,7 @@
 9. sudo ./install auto > /tmp/logfile
 
 <!-- Should See Active codedeploy agent service running -->
+
 10. sudo service codedeploy-agent status
 
 <!-- Output
@@ -44,20 +46,19 @@
     Apr 12 17:43:13 ip-172-31-23-39 systemd[1]: Started codedeploy-agent.service - LSB: AWS CodeDeploy Host Agent.
  -->
 
- 11. d-E9MJC01PB
+11. d-E9MJC01PB
 
 <!-- To Get file from S3 need to install this package -->
- 12. sudo apt-get install s3cmd
+
+12. sudo apt-get install s3cmd
 
  <!-- Then Run this Command -->
 
- 13. s3cmd get s3://<Bucket_Name>/<Folder_Name>/<File_Name>
+13. s3cmd get s3://<Bucket_Name>/<Folder_Name>/<File_Name>
 
+severless-services-deployment-group
 
- severless-services-deployment-group
+less /opt/codedeploy-agent/deployment-root/67918741-84b2-4b83-8670-c9c9b502561b/d-5KPXHVEPB/logs/scripts.log
+d-KM5EN4UCO
 
- less /opt/codedeploy-agent/deployment-root/67918741-84b2-4b83-8670-c9c9b502561b/d-5KPXHVEPB/logs/scripts.log
- d-KM5EN4UCO
-
-
- ssh -i "Serverless-Service-Key-pair-Ec2.pem" ubuntu@ec2-52-221-199-60.ap-southeast-1.compute.amazonaws.com
+ssh -i "Serverless-Service-Key-pair-Ec2.pem" ubuntu@ec2-52-221-199-60.ap-southeast-1.compute.amazonaws.com

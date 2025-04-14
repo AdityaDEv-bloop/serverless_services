@@ -1,8 +1,7 @@
-from django.contrib.auth.models import User
 from django.db.utils import IntegrityError
 from django.test import TestCase
 
-from easyship.models import BankDetails, Member
+from easyship.models import Account, BankDetails, Member
 
 
 class TestMemberModel(TestCase):
@@ -13,8 +12,8 @@ class TestMemberModel(TestCase):
             ifsccode="Test IFSC",
             branchname="Test Branch",
         )
-        self.account = User.objects.create_user(
-            "Test User", "test@test.com", "testpassword"
+        self.account = Account.objects.create(
+            email="test@test.com", username="testUser", phonenumber="+123456789"
         )
         self.bd = BankDetails.objects.get(accountno="Test Account No")
         self.member = Member.objects.create(
