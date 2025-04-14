@@ -63,7 +63,8 @@ REST_FRAMEWORK = {
 }
 
 SWAGGER_SETTINGS = {
-    'USE_SESSION_AUTH': False
+    'USE_SESSION_AUTH': False,
+    'VALIDATOR_URL': 'http://52.221.199.60',
 }
 
 MIDDLEWARE = [
