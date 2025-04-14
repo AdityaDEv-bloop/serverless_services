@@ -1,5 +1,5 @@
 env/
-.env
+
 *-env/
 *.evv/
 *_env/
@@ -16,5 +16,7 @@ package.json
 */migrations/*
 
 *.pem
+
+README.Tutorial.md
 
 

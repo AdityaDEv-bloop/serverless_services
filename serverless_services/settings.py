@@ -23,12 +23,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-9u#@9q7*-$z9i_19!^7kf0l2z*p$j7-(e#--fm1vgwomu$s=$!"
-
+try:
+    SECRET_KEY = "django-insecure-9u#{0}-(e#--{1}$s=$!".format(os.environ['KEY_PART_ONE'],os.environ['KEY_PART_TWO'])
+except:
+    load_dotenv()
+    SECRET_KEY = "django-insecure-9u#{0}-(e#--{1}$s=$!".format(os.environ['KEY_PART_ONE'],os.environ['KEY_PART_TWO'])
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+try:
+    DEBUG = os.environ['DEBUG']
+except:
+    load_dotenv()
+    DEBUG = os.environ['DEBUG']
 
-ALLOWED_HOSTS = ["*", "0.0.0.0:7000"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -56,7 +63,7 @@ REST_FRAMEWORK = {
 }
 
 SWAGGER_SETTINGS = {
-    "VALIDATOR_URL": "http://0.0.0.0:7000",
+    'USE_SESSION_AUTH': False
 }
 
 MIDDLEWARE = [
