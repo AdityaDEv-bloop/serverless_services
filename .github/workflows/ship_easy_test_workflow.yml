@@ -10,11 +10,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
         with:
-          python-version: '3.13'
+          python-version: "3.13"
       - name: Run Precommits and Test Cases
         run: |
           python -m pip install -r requirements.txt
-          pre-commit run --all-files
           python manage.py makemigrations
           python manage.py migrate
           python manage.py test

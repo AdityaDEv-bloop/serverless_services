@@ -1,2 +1,2 @@
-from .multilanguage_content import *
 from .auth import *
+from .multilanguage_content import *
