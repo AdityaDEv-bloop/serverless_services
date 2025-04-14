@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 
 from dotenv import load_dotenv
-
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,17 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-try:
-    SECRET_KEY = "django-insecure-9u#{0}-(e#--{1}$s=$!".format(os.environ['KEY_PART_ONE'],os.environ['KEY_PART_TWO'])
-except:
-    load_dotenv()
-    SECRET_KEY = "django-insecure-9u#{0}-(e#--{1}$s=$!".format(os.environ['KEY_PART_ONE'],os.environ['KEY_PART_TWO'])
+SECRET_KEY = "django-insecure-9u#{0}-(e#--{1}$s=$!".format(os.environ['KEY_PART_ONE'],os.environ['KEY_PART_TWO'])
 # SECURITY WARNING: don't run with debug turned on in production!
-try:
-    DEBUG = os.environ['DEBUG']
-except:
-    load_dotenv()
-    DEBUG = os.environ['DEBUG']
+DEBUG = os.environ['DEBUG']
 
 ALLOWED_HOSTS = ["*"]
 
@@ -103,22 +95,7 @@ WSGI_APPLICATION = "serverless_services.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-DATABASES = {}
-try:
-    os.environ["ENVIROMENT"]
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql_psycopg2",
-            "NAME": os.environ["DEV_DB_DATABASE_NAME"],
-            "USER": os.environ["DEV_DB_USER_NAME"],
-            "PASSWORD": os.environ["DEV_DB_PASSWORD"],
-            "HOST": os.environ["DEV_DB_HOST"],
-            "PORT": os.environ["DEV_DB_PORT"],
-        },
-    }
-except:
-    load_dotenv()
-    DATABASES = {
+DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
             "NAME": os.environ["DEV_DB_DATABASE_NAME"],
