@@ -17,8 +17,14 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import include, path
+from easyship.views.home import Home
+from easyship.views import SignIn, SignOut, Signup
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("easyship.urls")),
+    path("api/v1/", include("easyship.urls")),
+    path("", view=Home,name="home"),
+    path("api/signin/", view=SignIn.as_view(), name="sign-in"),
+    path("api/signup/", view=Signup.as_view(), name="sign-up"),
+    path("api/signout/", view=SignOut.as_view(), name="sign-out"),
 ]
