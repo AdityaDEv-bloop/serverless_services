@@ -167,12 +167,14 @@ CORS_ALLOWED_ORIGINS = [
     "https://adilaxmiexport.com",
     "http://adilaxmiexport.com",
     "https://localhost:5173",
+    "http://localhost:5173",
     "http://54.179.227.228",
 ]
 CSRF_TRUSTED_ORIGINS = [
     "https://adilaxmiexport.com",
     "http://adilaxmiexport.com",
     "https://localhost:5173",
+    "http://localhost:5173",
     "http://54.179.227.228",
 ]
 CORS_ALLOW_METHODS = [
