@@ -164,18 +164,16 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 CORS_ALLOWED_ORIGINS = [
-    "https://adi-laxmi.web.app",
     "https://adilaxmiexport.com",
     "http://adilaxmiexport.com",
     "https://localhost:5173",
-    "http://52.221.199.60",
+    "http://54.179.227.228",
 ]
 CSRF_TRUSTED_ORIGINS = [
-    "https://adi-laxmi.web.app",
     "https://adilaxmiexport.com",
     "http://adilaxmiexport.com",
     "https://localhost:5173",
-    "http://52.221.199.60",
+    "http://54.179.227.228",
 ]
 CORS_ALLOW_METHODS = [
     "DELETE",
